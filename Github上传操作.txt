@@ -1,0 +1,34 @@
+右键需要被上传的文件夹选择 Git Bash Here 选项，输入 ：“ git clone https://github.com/qweztt/JDBC2.git”，git clone为必须项
+当完成以上步骤后，会在需要被上传的文件夹中新建出一个JDBC2文件夹，把需要上传的文件复制到该文件夹中（进入到JDBC2文件夹中（cd JDBC2）），完成后输入 git add .
+有可能会提示：
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/JDBC_BaseKnowledge/Main.java', LF will be replaced by CRLF the next time Git touches it
+解决办法：
+	输入 $ git config --global core.autocrlf true
+完成以上步骤后，输入：git commit -m "logs",
+如出现：
+	Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'zhou@zhou.(none)')
+
+
+则需要配置用户名和邮箱：
+	用户名：$ git config --global user.name "qweztt" 邮箱：$ git config --global user.email 2524478749@qq.com
+
+完成以上步骤后，再次输入git commit -m "logs"，等待出现提示符，输入git push -u orgin main - - -> 这个main与下面那个main是对应的，
+下面括号里显示什么，这里的main就对应换成什么
+zhou@zhou MINGW64 /d/JDBC/JDBC2 (main)
+
+授权 - - > 输入密码，同意授权
+
+等待文件上传成功，再次回到Github界面刷新，即可看到被上传的文件
